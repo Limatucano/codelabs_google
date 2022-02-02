@@ -2,6 +2,6 @@
     <string name="app_name">HelloToast</string>
     <string name="toast_button">Toast</string>
     <string name="count_initial_value">0</string>
-    <string name="count_button">Counter</string>
+    <string name="count_button">Count</string>
     <string name="toast_message">Hello Toast!</string>
 </resources>
