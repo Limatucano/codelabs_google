@@ -1,0 +1,6 @@
+com/example/hellotoast/BuildConfig.java
+ com.example.hellotoast.BuildConfig
+com/example/hellotoast/databinding/ActivityMainBinding.java
+ com.example.hellotoast.databinding.ActivityMainBinding
+com/example/hellotoast/MainActivity.java
+ com.example.hellotoast.MainActivity
