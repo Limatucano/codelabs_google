@@ -3,4 +3,5 @@
     <string name="send_button_label">Send</string>
     <string name="message_received">Message Received</string>
     <string name="hint_editText_main">Enter Your Message Here</string>
+    <string name="text_header_reply">Reply Received</string>
 </resources>

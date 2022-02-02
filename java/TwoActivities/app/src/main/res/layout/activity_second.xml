@@ -28,4 +28,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_header" />
+
+    <Button
+        android:id="@+id/buttonReply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send_button_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/editText_second"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonReply"
+        app:layout_constraintEnd_toStartOf="@+id/buttonReply"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonReply"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:autofillHints="true"
+        android:hint="@string/hint_editText_main"
+        android:importantForAutofill="no"
+        android:inputType="text" />
 </androidx.constraintlayout.widget.ConstraintLayout>
