@@ -1,6 +1,0 @@
-com/example/helloworld/BuildConfig.java
- com.example.helloworld.BuildConfig
-com/example/helloworld/databinding/ActivityMainBinding.java
- com.example.helloworld.databinding.ActivityMainBinding
-com/example/helloworld/MainActivity.java
- com.example.helloworld.MainActivity
