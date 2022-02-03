@@ -1,2 +1,0 @@
-com/example/helloworld/ExampleUnitTest.java
- com.example.helloworld.ExampleUnitTest
