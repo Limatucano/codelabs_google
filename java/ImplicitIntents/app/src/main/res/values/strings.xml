@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ImplictIntent</string>
+    <string name="button_label_open_website">Open Website</string>
+    <string name="button_label_open_location">Open Location</string>
+    <string name="button_label_share_text">Share This Text</string>
+</resources>
