@@ -1,6 +1,7 @@
 package com.example.implictintent;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ShareCompat;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -26,10 +27,22 @@ public class MainActivity extends AppCompatActivity {
         });
 
         viewBinding.buttonShareText.setOnClickListener(onClick -> {
-
+            shareText();
         });
     }
 
+    private void shareText() {
+        String textToShare = viewBinding.editShareText.getText().toString();
+        String mimeType = "text/plain";
+
+        ShareCompat.IntentBuilder
+                .from(this)
+                .setType(mimeType)
+                .setChooserTitle("Share this text with: ")
+                .setText(textToShare)
+                .startChooser();
+
+    }
     private void openLocation(){
         String locationAddress = viewBinding.editOpenLocation.getText().toString();
         Uri addessUri = Uri.parse("geo:0,0?q=" + locationAddress);
