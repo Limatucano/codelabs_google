@@ -65,8 +65,30 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(intent,TEXT_REQUEST);
         });
 
+
     }
 
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        boolean replyIsVisible = savedInstanceState.getBoolean("reply_visible");
+        if(replyIsVisible){
+            viewBinding.textHeaderReply.setVisibility(View.VISIBLE);
+            viewBinding.textMessageReply.setText(savedInstanceState.getString("reply_text"));
+            viewBinding.textMessageReply.setVisibility(View.VISIBLE);
+
+        }
+
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle bundle) {
+        super.onSaveInstanceState(bundle);
+        if(viewBinding.textHeaderReply.getVisibility() == View.VISIBLE) {
+            bundle.putBoolean("reply_visible", true);
+            bundle.putString("reply_text", viewBinding.textMessageReply.getText().toString());
+        }
+
+    }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
