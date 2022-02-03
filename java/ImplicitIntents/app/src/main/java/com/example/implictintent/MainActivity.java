@@ -6,6 +6,7 @@ import androidx.core.app.ShareCompat;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 
 import com.example.implictintent.databinding.ActivityMainBinding;
@@ -29,6 +30,17 @@ public class MainActivity extends AppCompatActivity {
         viewBinding.buttonShareText.setOnClickListener(onClick -> {
             shareText();
         });
+
+        viewBinding.buttonTakePicture.setOnClickListener(onClick -> {
+            takePicture();
+        });
+    }
+    private void takePicture() {
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if(intent.resolveActivity(getPackageManager()) != null){
+            startActivity(intent);
+        }
+
     }
 
     private void shareText() {
