@@ -28,6 +28,9 @@
     <string name="same_day_radio">Same day messenger service</string>
     <string name="next_day_radio">Next day ground delivery</string>
     <string name="pick_up_radio">Pick up</string>
+    <string name="action_order">Order</string>
+    <string name="action_favorites">Favorites</string>
+    <string name="action_contact">Contact</string>
 
     <string-array name="labels_array">
         <item>Home</item>
