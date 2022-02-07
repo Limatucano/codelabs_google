@@ -31,6 +31,7 @@
     <string name="action_order">Order</string>
     <string name="action_favorites">Favorites</string>
     <string name="action_contact">Contact</string>
+    <string name="alert_button">Alert</string>
 
     <string-array name="labels_array">
         <item>Home</item>

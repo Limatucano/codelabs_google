@@ -1,5 +1,7 @@
 package com.example.droidcafe;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -58,6 +60,9 @@ public class SecondFragment extends Fragment  implements AdapterView.OnItemSelec
 
         binding.sameday.setOnClickListener(this::onRadioButtonClicked);
 
+        binding.alertButton.setOnClickListener(onClick -> {
+            onCLickShowAlert();
+        });
 
         binding.phoneText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
@@ -78,6 +83,31 @@ public class SecondFragment extends Fragment  implements AdapterView.OnItemSelec
         binding.labelSpinner.setAdapter(adapter);
 
 
+
+    }
+    public void onCLickShowAlert(){
+        AlertDialog.Builder alert = new AlertDialog.Builder(requireActivity());
+
+        alert.setTitle("ALERTA");
+        alert.setMessage("Clique em OK para continuar ou CANCEL para parar:");
+        alert.setCancelable(false);
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                displayToast("OK");
+            }
+        });
+
+        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                displayToast("CANCEL");
+            }
+        });
+
+        alert.show();
 
     }
     public void dialNumber(){
