@@ -78,6 +78,7 @@
         android:ems="10"
         android:hint="@string/phone_hint"
         android:inputType="phone"
+        android:imeOptions="actionSend"
         app:layout_constraintBaseline_toBaselineOf="@id/phone_label"
         app:layout_constraintStart_toEndOf="@id/phone_label" />
 

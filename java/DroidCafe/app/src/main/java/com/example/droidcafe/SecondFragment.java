@@ -1,12 +1,18 @@
 package com.example.droidcafe;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -52,17 +58,36 @@ public class SecondFragment extends Fragment  implements AdapterView.OnItemSelec
 
         binding.sameday.setOnClickListener(this::onRadioButtonClicked);
 
+
+        binding.phoneText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                boolean handled = false;
+
+                if(i == EditorInfo.IME_ACTION_SEND){
+                    dialNumber();
+                    handled = true;
+                }
+                return handled;
+            }
+        });
         binding.labelSpinner.setOnItemSelectedListener(this);
-
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(requireActivity(),R.array.labels_array, android.R.layout.simple_spinner_item);
-
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.labelSpinner.setAdapter(adapter);
 
 
 
     }
+    public void dialNumber(){
+        String phoneNum = "tel:" + binding.phoneText.getText().toString();
 
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse(phoneNum));
+        startActivity(intent);
+
+    }
     public void onRadioButtonClicked(View view){
         Map<Integer,String> map = new HashMap(){{
             put(R.id.sameday, getString(R.string.same_day_radio));
