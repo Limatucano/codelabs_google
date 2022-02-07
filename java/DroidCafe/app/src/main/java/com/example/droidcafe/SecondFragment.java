@@ -5,7 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,20 +15,22 @@ import android.widget.ArrayAdapter;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
+import androidx.lifecycle.Observer;
 
 import com.example.droidcafe.databinding.FragmentSecondBinding;
-
 import java.util.HashMap;
 import java.util.Map;
+import com.example.droidcafe.DatePickerFragment;
 
-public class SecondFragment extends Fragment  implements AdapterView.OnItemSelectedListener {
+public class SecondFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     private FragmentSecondBinding binding;
     private String messageReceived;
+    private DatePickerFragment datePickerFragment = new DatePickerFragment();
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +64,9 @@ public class SecondFragment extends Fragment  implements AdapterView.OnItemSelec
         binding.alertButton.setOnClickListener(onClick -> {
             onCLickShowAlert();
         });
-
+        binding.dateButton.setOnClickListener(onClick -> {
+           showDatePicker();
+        });
         binding.phoneText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
             @Override
@@ -81,10 +84,20 @@ public class SecondFragment extends Fragment  implements AdapterView.OnItemSelec
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(requireActivity(),R.array.labels_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.labelSpinner.setAdapter(adapter);
-
-
+        datePickerFragment.dateValue.observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                displayToast(s);
+            }
+        });
 
     }
+
+    public void showDatePicker(){
+        assert getFragmentManager() != null;
+        datePickerFragment.show(getFragmentManager(),"datePicker");
+    }
+
     public void onCLickShowAlert(){
         AlertDialog.Builder alert = new AlertDialog.Builder(requireActivity());
 
@@ -150,4 +163,5 @@ public class SecondFragment extends Fragment  implements AdapterView.OnItemSelec
     public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
+
 }
