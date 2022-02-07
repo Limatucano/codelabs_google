@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -16,7 +18,7 @@ import com.example.droidcafe.databinding.FragmentSecondBinding;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SecondFragment extends Fragment {
+public class SecondFragment extends Fragment  implements AdapterView.OnItemSelectedListener {
 
     private FragmentSecondBinding binding;
     private String messageReceived;
@@ -50,6 +52,15 @@ public class SecondFragment extends Fragment {
 
         binding.sameday.setOnClickListener(this::onRadioButtonClicked);
 
+        binding.labelSpinner.setOnItemSelectedListener(this);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(requireActivity(),R.array.labels_array, android.R.layout.simple_spinner_item);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        binding.labelSpinner.setAdapter(adapter);
+
+
+
     }
 
     public void onRadioButtonClicked(View view){
@@ -74,4 +85,14 @@ public class SecondFragment extends Fragment {
         binding = null;
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        String spinnerLabel = adapterView.getItemAtPosition(i).toString();
+        displayToast(spinnerLabel);
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
 }
