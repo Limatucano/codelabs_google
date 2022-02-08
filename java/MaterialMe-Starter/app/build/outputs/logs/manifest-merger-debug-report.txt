@@ -1,0 +1,99 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\af48b3b3c711d953664b71ed929e7534\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\7064564c9d33461406cc31a71bb614e5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\1e4a4284e3f5f8119b1dbbc0c9e12784\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\eb6d5bd0a3fd319316125acbf44faca1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\47adbf66e329f057ce0c9adfac9869a4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\9575ee7d1ee3ed0ffc185d6b2d5db392\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\65d33739b735fab2d54b2b31cd4f8c51\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\3b69b7c59dcb7041c33fc6f68f1e997b\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\47e6b8bb24694b2c59bb606ec833f4cf\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\42dd8ef3e3de50593e60896d347b1e9e\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\25e77d00a0a7003cc9759aff243c7c43\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b665c62f4f3551dabf4594f680abc213\AndroidManifest.xml:17:1-22:12
+INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+	package
+		ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:18:5-45
+		INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+		ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+		INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+		ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:1-35:12
+		INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:17:11-69
+application
+ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:20:5-33:19
+	android:supportsRtl
+		ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:24:9-35
+	android:label
+		ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:23:9-41
+	android:icon
+		ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:22:9-43
+	android:allowBackup
+		ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:21:9-35
+	android:theme
+		ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:25:9-40
+activity#com.example.android.materialme.MainActivity
+ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:26:9-32:20
+	android:name
+		ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:26:19-77
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:27:13-31:29
+action#android.intent.action.MAIN
+ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:28:17-69
+	android:name
+		ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml:30:27-74
+uses-sdk
+INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\af48b3b3c711d953664b71ed929e7534\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\af48b3b3c711d953664b71ed929e7534\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\7064564c9d33461406cc31a71bb614e5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\7064564c9d33461406cc31a71bb614e5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\1e4a4284e3f5f8119b1dbbc0c9e12784\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\1e4a4284e3f5f8119b1dbbc0c9e12784\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\eb6d5bd0a3fd319316125acbf44faca1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\eb6d5bd0a3fd319316125acbf44faca1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\47adbf66e329f057ce0c9adfac9869a4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\47adbf66e329f057ce0c9adfac9869a4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\9575ee7d1ee3ed0ffc185d6b2d5db392\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\9575ee7d1ee3ed0ffc185d6b2d5db392\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\65d33739b735fab2d54b2b31cd4f8c51\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\65d33739b735fab2d54b2b31cd4f8c51\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\3b69b7c59dcb7041c33fc6f68f1e997b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\3b69b7c59dcb7041c33fc6f68f1e997b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\47e6b8bb24694b2c59bb606ec833f4cf\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\47e6b8bb24694b2c59bb606ec833f4cf\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\42dd8ef3e3de50593e60896d347b1e9e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\42dd8ef3e3de50593e60896d347b1e9e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\25e77d00a0a7003cc9759aff243c7c43\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\25e77d00a0a7003cc9759aff243c7c43\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b665c62f4f3551dabf4594f680abc213\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\mathe\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b665c62f4f3551dabf4594f680abc213\AndroidManifest.xml:20:5-44
+INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+		ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+		ADDED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projetos\codelabs_google\java\MaterialMe-Starter\app\src\main\AndroidManifest.xml
