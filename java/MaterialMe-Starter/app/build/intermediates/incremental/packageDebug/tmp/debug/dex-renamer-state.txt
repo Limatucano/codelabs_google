@@ -1,4 +1,4 @@
-#Tue Feb 08 16:51:50 BRT 2022
+#Tue Feb 08 18:13:48 BRT 2022
 base.0=D\:\\Projetos\\codelabs_google\\java\\MaterialMe-Starter\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
 path.0=classes.dex
