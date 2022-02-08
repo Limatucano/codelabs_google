@@ -20,7 +20,7 @@ public class MainViewModel extends ViewModel {
                 mScore2 -= 1;
                 return new MutableLiveData(mScore2);
         }
-        return new MutableLiveData();
+        return new MutableLiveData(0);
     }
 
     public MutableLiveData increaseScore(@NonNull View view){
@@ -32,6 +32,6 @@ public class MainViewModel extends ViewModel {
                 mScore2 += 1;
                 return new MutableLiveData(mScore2);
         }
-        return new MutableLiveData();
+        return new MutableLiveData(0);
     }
 }

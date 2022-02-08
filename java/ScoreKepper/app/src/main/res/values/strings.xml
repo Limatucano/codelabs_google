@@ -2,4 +2,6 @@
     <string name="app_name">ScoreKepper</string>
     <string name="team_1_label">Team 1</string>
     <string name="team_2_label">Team 2</string>
+    <string name="plus_button_description">Plus Button</string>
+    <string name="minus_button_description">Minus Button</string>
 </resources>
