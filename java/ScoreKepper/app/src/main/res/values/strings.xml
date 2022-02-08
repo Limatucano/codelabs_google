@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ScoreKepper</string>
+    <string name="team_1_label">Team 1</string>
+    <string name="team_2_label">Team 2</string>
 </resources>
