@@ -17,7 +17,18 @@
     <string name="app_name">Material Me!</string>
     <string name="title_placeholder">Title</string>
     <string name="news_placeholder">News</string>
-    <string name="sports_info_placeholder">Here is some news</string>
+    <string name="sports_info_placeholder">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vestibulum lectus nunc, tincidunt eu metus eu, finibus varius dui. Donec metus nisi, tincidunt
+        eget metus quis, volutpat interdum nunc. In volutpat diam quis auctor tempor. Proin congue
+        purus ut lacus blandit, fermentum auctor mauris tincidunt. Aliquam suscipit, elit id
+        vulputate dictum, lorem tortor porta nisl, quis condimentum tortor elit vel ipsum. Integer
+        vitae tortor at quam finibus rhoncus at quis enim. Etiam a arcu neque. Vestibulum ante ipsum
+        primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque egestas pretium
+        sodales. Nullam in nibh rutrum, ultrices tellus et, dignissim felis. Nunc sodales ex ac ex
+        volutpat, id suscipit odio malesuada. Nam scelerisque in eros non fringilla. Donec et
+        tincidunt velit. Nulla quis varius enim. Praesent pulvinar cursus mattis. Proin vel mi non
+        turpis fermentum blandit.</string>
 
     <string-array name="sports_titles">
         <item>Baseball</item>
