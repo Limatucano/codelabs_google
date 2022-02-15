@@ -11,11 +11,20 @@ import com.example.fragmentexample1.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
+    private boolean isFragmentDisplayed = false;
+    static final String STATE_FRAGMENT = "state_of_fragment";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        if (savedInstanceState != null) {
+            isFragmentDisplayed = savedInstanceState.getBoolean(STATE_FRAGMENT);
+            if (isFragmentDisplayed) {
+                // If the fragment is displayed, change button to "close".
+                binding.showFrame.setText(R.string.close);
+            }
+        }
 
         binding.showFrame.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,5 +49,54 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+    }
+    /**
+     * This method is called when the user clicks the button
+     * to open the fragment.
+     */
+    public void displayFragment() {
+        // Instantiate the fragment.
+        SimpleFragment simpleFragment = SimpleFragment.newInstance();
+        // Get the FragmentManager and start a transaction.
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager
+                .beginTransaction();
+
+        // Add the SimpleFragment.
+        fragmentTransaction.add(R.id.fragment_container,
+                simpleFragment).addToBackStack(null).commit();
+
+        // Update the Button text.
+        binding.showFrame.setText(R.string.close);
+        // Set boolean flag to indicate fragment is open.
+        isFragmentDisplayed = true;
+    }
+
+    /**
+     * This method is called when the user clicks the button to
+     * close the fragment.
+     */
+    public void closeFragment() {
+        // Get the FragmentManager.
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        // Check to see if the fragment is already showing.
+        SimpleFragment simpleFragment = (SimpleFragment) fragmentManager
+                .findFragmentById(R.id.fragment_container);
+        if (simpleFragment != null) {
+            // Create and commit the transaction to remove the fragment.
+            FragmentTransaction fragmentTransaction =
+                    fragmentManager.beginTransaction();
+            fragmentTransaction.remove(simpleFragment).commit();
+        }
+        // Update the Button text.
+        binding.showFrame.setText(R.string.open);
+        // Set boolean flag to indicate fragment is closed.
+        isFragmentDisplayed = false;
+    }
+
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the state of the fragment (true=open, false=closed).
+        savedInstanceState.putBoolean(STATE_FRAGMENT, isFragmentDisplayed);
+        super.onSaveInstanceState(savedInstanceState);
     }
 }
