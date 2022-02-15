@@ -19,6 +19,9 @@ public class SimpleFragment extends Fragment {
     private static final int NO = 1;
     public SimpleFragment() {
     }
+    public static SimpleFragment newInstance(){
+        return new SimpleFragment();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

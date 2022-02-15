@@ -7,8 +7,8 @@
     android:layout_height="match_parent"
     tools:context="com.example.fragmentexample1.MainActivity">
 
-    <fragment
-        android:id="@+id/fragment"
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:name="com.example.fragmentexample1.SimpleFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -25,9 +25,17 @@
         android:layout_marginTop="20dp"
         android:scaleType="centerCrop"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_container"
         app:srcCompat="@drawable/beatles_anthology_box" />
 
+    <Button
+        android:id="@+id/showFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/open"
+        app:layout_constraintEnd_toStartOf="@+id/scrollView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
     <TextView
         android:id="@+id/title"
         android:layout_width="0dp"
@@ -44,19 +52,16 @@
         app:layout_constraintTop_toTopOf="@+id/imageView"/>
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginRight="@dimen/standard_margin"
-        android:layout_marginEnd="@dimen/standard_margin"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="@dimen/standard_margin"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        android:layout_marginLeft="0dp"
-        android:layout_marginStart="0dp"
-        app:layout_constraintLeft_toLeftOf="@+id/title"
+        android:layout_marginRight="@dimen/standard_margin"
+        android:layout_marginBottom="@dimen/standard_margin"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="@dimen/standard_margin">
-
+        app:layout_constraintLeft_toLeftOf="@+id/title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
 
 
         <TextView
@@ -65,7 +70,7 @@
             android:layout_height="wrap_content"
             android:text="@string/article1"
             tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="288dp"/>
+            tools:layout_editor_absoluteY="288dp" />
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
