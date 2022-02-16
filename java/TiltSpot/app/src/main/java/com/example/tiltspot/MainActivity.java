@@ -75,13 +75,39 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         if(rotationOK){
             SensorManager.getOrientation(rotationMatrix,orientationValues);
         }
-        float z = orientationValues[0];
-        float y = orientationValues[1];
-        float x = orientationValues[2];
+        float azimuth = orientationValues[0];
+        float pitch = orientationValues[1];
+        float roll = orientationValues[2];
 
-        binding.valueAzimuth.setText(getResources().getString(R.string.value_format, z));
-        binding.valuePitch.setText(getResources().getString(R.string.value_format,y));
-        binding.valueRoll.setText(getResources().getString(R.string.value_format,x));
+        if(Math.abs(pitch) < VALUE_DRIFT){
+            pitch = 0;
+
+        }
+        if(Math.abs(roll) < VALUE_DRIFT){
+            roll = 0;
+        }
+
+
+        binding.valueAzimuth.setText(getResources().getString(R.string.value_format, azimuth));
+        binding.valuePitch.setText(getResources().getString(R.string.value_format,pitch));
+        binding.valueRoll.setText(getResources().getString(R.string.value_format,roll));
+
+        binding.spotTop.setAlpha(0f);
+        binding.spotBottom.setAlpha(0f);
+        binding.spotRight.setAlpha(0f);
+        binding.spotLeft.setAlpha(0f);
+
+        if (pitch > 0) {
+            binding.spotBottom.setAlpha(pitch);
+        } else {
+            binding.spotTop.setAlpha(Math.abs(pitch));
+        }
+        if (roll > 0) {
+            binding.spotLeft.setAlpha(roll);
+        } else {
+            binding.spotRight.setAlpha(Math.abs(roll));
+        }
+
     }
 
     @Override

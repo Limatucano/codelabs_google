@@ -15,6 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:alpha="0.5"
         app:srcCompat="@drawable/spot"/>
     <ImageView
         android:id="@+id/spot_bottom"
@@ -25,6 +26,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:srcCompat="@drawable/spot"
+        android:alpha="0.5"
         tools:ignore="ContentDescription" />
 
     <ImageView
@@ -37,6 +39,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/spot"
+        android:alpha="0.5"
         tools:ignore="ContentDescription"/>
 
     <ImageView
@@ -49,6 +52,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/spot"
+        android:alpha="0.5"
         tools:ignore="ContentDescription" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
