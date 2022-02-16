@@ -1,5 +1,13 @@
 package com.example.twoactivities;
 
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.action.ViewActions.typeText;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
+
+import androidx.test.espresso.*;
 import android.content.Context;
 
 import androidx.test.platform.app.InstrumentationRegistry;
@@ -22,5 +30,12 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("com.example.twoactivities", appContext.getPackageName());
+    }
+
+    @Test
+    public void activityLaunch(){
+        onView(withId(R.id.editText_main)).perform(typeText("this is a test"));
+        onView(withId(R.id.buttonSend)).perform(click());
+        onView(withId(R.id.text_message)).check(matches(withText("this is a test")));
     }
 }

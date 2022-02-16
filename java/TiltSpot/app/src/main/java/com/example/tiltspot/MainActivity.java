@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private SensorManager mSensorManager;
     private Sensor mSensorAccelerometer;
     private Sensor mSensorMagnetometer;
+    private float[] mAccelerometerData = new float[3];
+    private float[] mMagnetometerData = new float[3];
 
     // Very small values for the accelerometer (on all three axes) should
     // be interpreted as 0. This value is the amount of acceptable
@@ -57,7 +59,29 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
+        int sensorType = sensorEvent.sensor.getType();
 
+        switch (sensorType) {
+            case Sensor.TYPE_ACCELEROMETER:
+                mAccelerometerData = sensorEvent.values.clone();
+                break;
+            case Sensor.TYPE_MAGNETIC_FIELD:
+                mMagnetometerData = sensorEvent.values.clone();
+                break;
+        }
+        float[] rotationMatrix = new float[9];
+        boolean rotationOK = SensorManager.getRotationMatrix(rotationMatrix,null,mAccelerometerData,mMagnetometerData);
+        float orientationValues[] = new float[3];
+        if(rotationOK){
+            SensorManager.getOrientation(rotationMatrix,orientationValues);
+        }
+        float z = orientationValues[0];
+        float y = orientationValues[1];
+        float x = orientationValues[2];
+
+        binding.valueAzimuth.setText(getResources().getString(R.string.value_format, z));
+        binding.valuePitch.setText(getResources().getString(R.string.value_format,y));
+        binding.valueRoll.setText(getResources().getString(R.string.value_format,x));
     }
 
     @Override
