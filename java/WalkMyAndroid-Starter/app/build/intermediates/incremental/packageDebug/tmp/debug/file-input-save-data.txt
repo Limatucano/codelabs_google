@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Thu Feb 17 17:46:57 BRT 2022
+0.base=D\:\\Projetos\\codelabs_google\\java\\WalkMyAndroid-Starter\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=classes.dex
+count=1
+0.baseType=DIRECTORY
+0.set=DEX
