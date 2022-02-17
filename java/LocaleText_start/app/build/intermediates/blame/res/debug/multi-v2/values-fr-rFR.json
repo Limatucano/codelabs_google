@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\Projetos\\codelabs_google\\java\\LocaleText_start\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rFR\\values-fr-rFR.xml",
+            "map": [
+                {
+                    "source": "D:\\Projetos\\codelabs_google\\java\\LocaleText_start\\app\\src\\main\\res\\values-fr-rFR\\strings.xml",
+                    "from": {
+                        "startLines": "3,2,4,7,6,5",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "106,57,152,616,572,511",
+                        "endColumns": "44,47,357,49,42,59",
+                        "endOffsets": "146,100,505,661,610,566"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,100,148,506,556,599",
+                        "endColumns": "44,47,357,49,42,59",
+                        "endOffsets": "95,143,501,551,594,654"
+                    }
+                }
+            ]
+        }
+    ]
+}

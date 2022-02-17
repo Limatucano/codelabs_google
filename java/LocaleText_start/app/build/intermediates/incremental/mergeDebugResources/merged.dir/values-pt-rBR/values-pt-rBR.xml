@@ -19,6 +19,12 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Compartilhar com"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Compartilhar com %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Recolher"</string>
+    <string name="action_help">ajuda</string>
+    <string name="app_name">LocaleText</string>
+    <string name="description">"Nougat é uma família de doces feitos com açúcar ou mel, nozes torradas (amêndoas, nozes, pistácios, avelãs e nozes de macadâmia são comuns), claras de ovo batidas, e por vezes fruta cristalizada picada. É utilizada numa variedade de chocolates e barras de chocolate. "</string>
+    <string name="dial_log_message">Não é possivel abrir o telefone</string>
+    <string name="help_text">Se você precisa de ajuda, contate nosso departamento de suporte</string>
+    <string name="nougat">Pacote de doce nougat</string>
     <string msgid="146198913615257606" name="search_menu_title">"Pesquisar"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

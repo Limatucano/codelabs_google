@@ -796,6 +796,7 @@ id action_context_bar
 id action_divider
 id action_help
 id action_image
+id action_language
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
@@ -847,6 +848,8 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id expiration
+id expirationLabel
 id fab
 id fill
 id fill_horizontal
@@ -891,9 +894,13 @@ id parent
 id parentPanel
 id parent_matrix
 id pin
+id price
+id priceLabel
 id product_image
 id progress_circular
 id progress_horizontal
+id quantity
+id quantityLabel
 id radio
 id right
 id right_icon
@@ -952,6 +959,8 @@ id title_template
 id toolbar
 id top
 id topPanel
+id total
+id totalLabel
 id touch_outside
 id transition_current_scene
 id transition_layout_save
@@ -1079,8 +1088,10 @@ string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string character_counter_pattern
+string date_sample
 string description
 string dial_log_message
+string expiration_label
 string help_text
 string nougat
 string password_toggle_content_description
@@ -1088,9 +1099,13 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string price_per_package
+string quantity_label
 string search_menu_title
 string status_bar_notification_info_overflow
 string support_phone
+string total
+string value_sample
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
