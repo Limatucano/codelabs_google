@@ -86,6 +86,8 @@
         android:id="@+id/quantity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:imeOptions="actionDone"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="@+id/quantityLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/quantityLabel"

@@ -16,18 +16,24 @@
 
 package com.example.android.localetext;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.DateFormat;
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -36,7 +42,8 @@ import java.util.concurrent.TimeUnit;
  * a floating action button, an options menu, and the app bar.
  */
 public class MainActivity extends AppCompatActivity {
-
+    private NumberFormat mNumberFormat = NumberFormat.getInstance();
+    private static final String TAG = MainActivity.class.getSimpleName();
     /**
      * Creates the view with a toolbar for the options menu
      * and a floating action button, and initialize the
@@ -50,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +75,27 @@ public class MainActivity extends AppCompatActivity {
 
         TextView expirationDateView = (TextView) findViewById(R.id.expiration);
         expirationDateView.setText(formatterDate);
+
+        EditText quantity = (EditText) findViewById(R.id.quantity);
+
+        quantity.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                InputMethodManager imn = (InputMethodManager) textView.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                imn.hideSoftInputFromWindow(textView.getWindowToken(),0);
+                try {
+                    int mInputQuanty = mNumberFormat.parse(textView.getText().toString()).intValue();
+                    String myFormattedQuantity = mNumberFormat.format(mInputQuanty);
+                    textView.setText(myFormattedQuantity);
+                    textView.setError(null);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                    textView.setError(e.getMessage());
+                }
+                return true;
+            }
+        });
     }
 
     /**
