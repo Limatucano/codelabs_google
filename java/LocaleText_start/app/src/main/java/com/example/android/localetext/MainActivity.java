@@ -35,6 +35,7 @@ import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.Date;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -44,6 +45,13 @@ import java.util.concurrent.TimeUnit;
 public class MainActivity extends AppCompatActivity {
     private NumberFormat mNumberFormat = NumberFormat.getInstance();
     private static final String TAG = MainActivity.class.getSimpleName();
+    // Fixed price in U.S. dollars and cents: ten cents.
+    private double mPrice = 0.10;
+    // Exchange rates for France (FR) and Israel (IW).
+    private double mFrExchangeRate = 0.93; // 0.93 euros = $1.
+    private double mIwExchangeRate = 3.61; // 3.61 new shekels = $1.
+    private NumberFormat mCurrencyFormat = NumberFormat.getCurrencyInstance();
+    private String myFormattedPrice;
     /**
      * Creates the view with a toolbar for the options menu
      * and a floating action button, and initialize the
@@ -57,8 +65,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +83,30 @@ public class MainActivity extends AppCompatActivity {
         expirationDateView.setText(formatterDate);
 
         EditText quantity = (EditText) findViewById(R.id.quantity);
+        final TextView mtotal = (TextView) findViewById(R.id.total);
+
+        String deviceLocale = Locale.getDefault().getCountry();
+        // If country code is France or Israel, calculate price
+        // with exchange rate and change to the country's currency format.
+        if (deviceLocale.equals("FR") || deviceLocale.equals("IL")) {
+            if (deviceLocale.equals("FR")) {
+                // Calculate mPrice in euros.
+                mPrice *= mFrExchangeRate;
+            } else {
+                // Calculate mPrice in new shekels.
+                mPrice *= mIwExchangeRate;
+            }
+            // Use the user-chosen locale's currency format, which
+            // is either France or Israel.
+            myFormattedPrice = mCurrencyFormat.format(mPrice);
+        } else {
+            // mPrice is the same (based on U.S. dollar).
+            // Use the currency format for the U.S.
+            mCurrencyFormat = NumberFormat.getCurrencyInstance(Locale.US);
+            myFormattedPrice = mCurrencyFormat.format(mPrice);
+        }
+        TextView localePrice = (TextView) findViewById(R.id.price);
+        localePrice.setText(myFormattedPrice);
 
         quantity.setOnEditorActionListener(new EditText.OnEditorActionListener() {
 
@@ -85,10 +115,13 @@ public class MainActivity extends AppCompatActivity {
                 InputMethodManager imn = (InputMethodManager) textView.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                 imn.hideSoftInputFromWindow(textView.getWindowToken(),0);
                 try {
-                    int mInputQuanty = mNumberFormat.parse(textView.getText().toString()).intValue();
-                    String myFormattedQuantity = mNumberFormat.format(mInputQuanty);
+                    int mInputQuantity = mNumberFormat.parse(textView.getText().toString()).intValue();
+                    String myFormattedQuantity = mNumberFormat.format(mInputQuantity);
+                    Double total = mInputQuantity * mPrice;
+                    mtotal.setText(String.valueOf(total));
                     textView.setText(myFormattedQuantity);
                     textView.setError(null);
+
                 } catch (ParseException e) {
                     e.printStackTrace();
                     textView.setError(e.getMessage());
@@ -96,6 +129,10 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+
+
+
     }
 
     /**

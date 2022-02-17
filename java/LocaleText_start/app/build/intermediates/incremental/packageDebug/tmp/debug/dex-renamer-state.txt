@@ -1,4 +1,4 @@
-#Thu Feb 17 17:02:30 BRT 2022
+#Thu Feb 17 17:15:45 BRT 2022
 base.0=D\:\\Projetos\\codelabs_google\\java\\LocaleText_start\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
 path.0=classes.dex
