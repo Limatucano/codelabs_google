@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Thu Feb 17 15:20:06 BRT 2022
+0.base=D\:\\Projetos\\codelabs_google\\java\\LocaleText_start\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=classes.dex
+count=1
+0.baseType=DIRECTORY
+0.set=DEX
