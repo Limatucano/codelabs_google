@@ -10,7 +10,6 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 public class DialView extends View {
-    private static int SELECTION_COUNT = 4; // Total number of selections.
     private float mWidth;                   // Custom view width.
     private float mHeight;                  // Custom view height.
     private Paint mTextPaint;               // For text in the view.
@@ -58,10 +57,21 @@ public class DialView extends View {
         });
     }
 
-    private float[] computeXYForPosition(final int pos, final float radius) {
+    private float[] computeXYForPosition(final int pos, final float radius, final boolean isLabel) {
         float[] result = mTempResult;
-        Double startAngle = Math.PI * (9 / 8d);   // Angles are in radians.
-        Double angle = startAngle + (pos * (Math.PI / 4));
+        Double startAngle = mSelectionCount > 4 ? Math.PI * (3 / 2d): Math.PI * (9 / 8d);   // Angles are in radians.
+        Double angle = startAngle + (pos * (Math.PI / mSelectionCount));
+        if(mSelectionCount > 4){
+            result[0] = (float) (radius * Math.cos(angle * 2))
+                    + (mWidth / 2);
+            result[1] = (float) (radius * Math.sin(angle * 2))
+                    + (mHeight / 2);
+            if((angle > Math.toRadians(360)) && isLabel) {
+                result[1] += 20;
+            }
+            return result;
+        }
+
         result[0] = (float) (radius * Math.cos(angle)) + (mWidth / 2);
         result[1] = (float) (radius * Math.sin(angle)) + (mHeight / 2);
         return result;
@@ -94,7 +104,7 @@ public class DialView extends View {
         final float labelRadius = mRadius + 20;
         StringBuffer label = mTempLabel;
         for (int i = 0; i < mSelectionCount; i++) {
-            float[] xyData = computeXYForPosition(i, labelRadius);
+            float[] xyData = computeXYForPosition(i, labelRadius, true);
             float x = xyData[0];
             float y = xyData[1];
             label.setLength(0);
@@ -103,8 +113,7 @@ public class DialView extends View {
         }
         // Draw the indicator mark.
         final float markerRadius = mRadius - 35;
-        float[] xyData = computeXYForPosition(mActiveSelection,
-                markerRadius);
+        float[] xyData = computeXYForPosition(mActiveSelection, markerRadius, false);
         float x = xyData[0];
         float y = xyData[1];
         canvas.drawCircle(x, y, 20, mTextPaint);
