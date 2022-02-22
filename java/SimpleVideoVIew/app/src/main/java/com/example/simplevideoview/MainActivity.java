@@ -2,10 +2,12 @@ package com.example.simplevideoview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.MediaController;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
         controller.setMediaPlayer(mVideoView);
         mVideoView.setMediaController(controller);
 
+        mVideoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                Toast.makeText(MainActivity.this, "Playback completed", Toast.LENGTH_SHORT).show();
+                mVideoView.seekTo(1);
+            }
+        });
     }
     @Override
     protected void onStart(){
