@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SimpleCanvas</string>
+    <string name="keep_tapping">Keep tapping.</string>
+    <string name="press_to_reset">Press to reset!</string>
 </resources>
